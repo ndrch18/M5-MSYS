@@ -14,7 +14,7 @@
         <nav class="navbar navbar-dark bg-custom mb-3 sticky-top" style="background-color: #590404;">
             <div class="container-fluid">
                 <a class="navbar-brand mb-0" href="{% url 'view_menu' %}">My Tapas Menu</span> </a>
-                <a href="" style="color:white"><i class="material-icons">add</i></a>
+                <a href="add_menu" style="color:white"><i class="material-icons">add</i></a>
     
             </div>
 
@@ -23,8 +23,19 @@
         <div class="container">
             <div class="row">
 
-                {% block content %}
-                {% endblock %}
+                <div class="col-2">
+
+                    {% block sidebar %}
+                    {% endblock %}
+
+                </div>
+
+                <div class="col-10">
+
+                    {% block content %}
+                    {% endblock %}
+
+                </div>
 
             </div>
         </div>  
