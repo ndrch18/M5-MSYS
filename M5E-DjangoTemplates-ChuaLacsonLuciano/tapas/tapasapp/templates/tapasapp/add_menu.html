@@ -1,0 +1,25 @@
+{% extends 'tapasapp/base.html' %}
+{% load static %}
+
+{% block content %}
+<form>
+    <div class="input-group mb-3">
+        <div class="input-gorup-preend">
+            <span class="input-group-text" id="basic-addon1">Dish Name</span>
+        </div>
+        <input type="text" class="form-control">
+    </div>
+    <div class="input-group mb-3">
+        <div class="input-gorup-preend">
+            <span class="input-group-text" id="basic-addon1">Cooking Time</span>
+        </div>
+        <input type="number" class="form-control">
+    </div>
+    <div class="input-group mb-3">
+        <div class="input-gorup-preend">
+            <span class="input-group-text" id="basic-addon1">Prep Time</span>
+        </div>
+        <input type="number" class="form-control">
+    </div>
+</form>
+{% endblock %}
