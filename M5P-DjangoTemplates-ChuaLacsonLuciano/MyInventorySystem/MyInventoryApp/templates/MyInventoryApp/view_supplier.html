@@ -28,11 +28,11 @@
                             </tr>
                         </thead>
                         <tbody>
-                            {% for supplier in suppliers %}
+                            {% for s in supplier %}
                             <tr>
-                                <td> {{ supplier.name }} </td>
-                                <td> {{ supplier.city }} </td>
-                                <td> {{ supplier.country }} </td>
+                                <td> {{ s.name }} </td>
+                                <td> {{ s.city }} </td>
+                                <td> {{ s.country }} </td>
 
                                 
                                 <td> <button class="btn btn-dark">Details</button> </td>
