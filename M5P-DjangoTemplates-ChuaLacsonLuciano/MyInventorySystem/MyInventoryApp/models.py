@@ -19,10 +19,10 @@ class WaterBottle(models.Model):
     brand = models.CharField(max_length=100)
     cost = models.DecimalField(max_digits=10, decimal_places=2)
     size = models.CharField(max_length=100)
-    mouthSize = models.CharField(max_length=100)
+    mouth_size = models.CharField(max_length=100)
     color = models.CharField(max_length=100)
-    suppliers = models.ForeignKey(Supplier, on_delete=models.CASCADE)
-    currentQuantity = models.IntegerField()
+    supplier = models.ForeignKey(Supplier, on_delete=models.CASCADE)
+    current_quantity = models.IntegerField()
 
     def __str__(self):
         return f"SKU: {self.sku}, Brand: {self.brand}, Mouth Size: {self.mouthSize}, " \
