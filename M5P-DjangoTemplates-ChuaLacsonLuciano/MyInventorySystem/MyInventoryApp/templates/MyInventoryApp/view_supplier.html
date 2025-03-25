@@ -1,10 +1,44 @@
 {% extends 'MyInventoryApp/base.html' %}
+{% load static %}
 
-{% block content %}
-    <h2>Supplier List</h2>
-    <ul>
-        {% for supplier in suppliers %}
-            <li>{{ supplier.name }}</li>
-        {% endfor %}
-    </ul>
-{% endblock %}
+    {% block sidebar %}
+        <ul>
+            <li>
+                <a href="#" style="text-decoration: none; color: black;">View xxx</a>
+            </li>
+            <li>
+                <a href="#" style="text-decoration: none; color: black;">View xxx</a>
+            </li>
+            <li>
+                <a href="#" style="text-decoration: none; color: black;">View xxx</a>
+            </li>
+        </ul>
+    {% endblock %}
+
+                {% block content %}
+                <div class="col-12">
+                    <table class="table table-striped">
+                        <thead >
+                            <tr>
+                                <th scope="col"> Name </th>
+                                <th scope="col"> City </th>
+                                <th scope="col"> Country </th>
+  
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for supplier in suppliers %}
+                            <tr>
+                                <td> {{ supplier.name }} </td>
+                                <td> {{ supplier.city }} </td>
+                                <td> {{ supplier.country }} </td>
+
+                                
+                                <td> <button class="btn btn-dark">Details</button> </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                {% endblock %}
